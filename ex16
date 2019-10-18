@@ -1,0 +1,51 @@
+from sys import argv
+
+#I am importing the argument fuction
+
+script, filename = argv
+
+#I am setting the argv to equal filename so I can place it down later vs using input
+
+
+print(f"We're going to erase {filename}.")
+#Here argv=filename is exchangedand in the command line I write test.txt which is a file in lpthw folder
+
+print("If you don't want that, hit CTRL-C (^C).")
+print("If you do want that, hit RETURN.")
+#these are all just printed lines that are not interactive in the command line
+
+
+input("?")
+#I can input something here at the command line but it has no impact what I write
+
+print("Opening the file...")
+target = open(filename, 'w')
+#The 'w' ensures that you want to open the file and the target is now a name for the open file functions
+
+
+print("Truncating the file. Goodbye!")
+target.truncate()
+#This trunctaes the target which = the test.txt file
+print("Now  I'm going to ask you for three lines.")
+
+line1 = input("line 1:")
+line2 = input("line 2:")
+line3 = input("line 3:")
+
+#Due to the truncating command, I can place input in those three lines and that will now appear in the test.txt file for whatever I write in the command line
+
+print("I'm going to write these to the file.")
+
+target.write(line1)
+target.write("\n")
+target.write(line2)
+target.write("\n")
+target.write(line3)
+target.write("\n")
+#This is where the formatting for the text I entered into the command line comes in code form.
+#target.write(line1) tells the program to write my command line input into the file and the \n to go down a line1
+
+
+print("And finally, we close it.")
+target.close()
+#The target.close() closes the file and saves it
