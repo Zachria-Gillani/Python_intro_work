@@ -1,0 +1,18 @@
+#Here's some new strange stuff, remember type it exactly
+
+days= "Mon Tue Wed Thu Fri Sat Sun"
+#Here I am programming the word days to have a string of weekdays inside it
+months = "Jan\nFeb\nMar\nApr\nMay\nJun\nJul\nAug"
+#This is another way to program a variable with the strange BACKSLASH not FORWARD slash and n \n
+#Be sure to give space after each math notation for prooper symantics
+#Also the \n makes that next word/variable go down a line to have a vertical appearance
+print("Here are the days:", days)
+print("Here are the months:", months)
+
+print("""
+There's something going on here.
+With the three double-quotes.
+We'll be able to type as much as we like.
+Even 4 lines if we weant, or 5, or 6
+""")
+#Another way to write in long string lines
