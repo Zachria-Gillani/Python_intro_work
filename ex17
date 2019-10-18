@@ -1,0 +1,33 @@
+from sys import argv
+from os.path import exists
+#The exists code that was imported as an argument allows a boolean to be reads#That tells us if a path
+#object exists independently or if it is a file or directory
+#There are other such code names such as try which is called a try block and exists() with conditional if statements.
+
+script, from_file, to_file = argv
+#Here I list the file I want to move to the other file, in this case I chose test.txt and copy.txt
+
+print(f"Copying from {from_file} to {to_file}")
+
+#we could do these two on one line, how?
+in_file = open(from_file)
+indata = in_file.read()
+
+#The in_file = open(from_file) allows the file to be open and then the orher opens the second file contents
+print(f"The input file is {len(indata)} bytes long")
+#The len here allows me to print how long the indata variable is
+
+print(f"Does the output file exist? {exists(to_file)}")
+print("Ready, hit RETURN to continue,   CTRL-C to abort.")
+input()
+
+out_file = open(to_file, 'w')
+out_file.write(indata)
+
+print("Alright, all done.")
+
+out_file.close()
+in_file.close()
+#If I do not put the close statement by the file names, the function will not copy to the other file.
+
+#The above code ends and closes the files we tampered with or rather copied the contents to
