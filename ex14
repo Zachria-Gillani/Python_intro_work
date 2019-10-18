@@ -1,0 +1,36 @@
+rom sys import argv
+#I imported an argument fucntion from python, this is used below.  This allows me to enter words in the command line and those words
+#Will take the place of the later {} bracketed areas.  So if I put in the command (not python) line Zach, Hardass Lonely after python ex14.py
+# Then the computer will say Do you like me, I have been very lonely.
+
+#argv is case sensitive, if I do Argv, it does not run in command line
+
+
+script, user_name, computer_adjective, computer_feeling = argv
+#This has been an abstract way to insert random arguments into the argv area
+prompt = f'{script}> '
+
+#This is a random prompt...because I wrote script above, when the command line prompts users to respond, it will say script name which is
+#ex.14.py> but if I chose f'{>}' then it would have a > beside the area that people key in their responses'
+
+print(f"HI {user_name}, I'm the {script} script. I am a {computer_adjective}.")
+print("I'd like to ask you a few questions.")
+print(f"Do you like me {user_name}? I have been very {computer_feeling}")
+tikes = input(prompt)
+
+#Okay so the variable input above tikes = input(prompt) is basically abstract.  It was originally "likes" after changing that the codes# messed
+# up at lines 33 where the {likes} variable was repeated because it did not understand it.  But basically, whatever
+# I type in the command line (not python) will be repeated for every instance that {likes} is in the program.
+
+#Above where likes=input(prompt) will allow me to place my response within the command line, same with the code right below this
+
+print(f"Where do you live {user_name}?")
+lives = input(prompt)
+
+print("What kind of computer do you have?")
+computer = input(prompt)
+
+print(f"""
+Alright, so you said {tikes} about liking me.
+You live in {lives}.  Not sure where that is.
+And you have a {computer} computer.  Nice.""")
