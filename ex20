@@ -1,0 +1,66 @@
+from sys import argv
+
+script, input_file = argv
+#This makes it so thatI need to enter a file name within the lpthw folder at the command line after I key in ex20.py, here I did text.txt
+
+def print_all(f):
+    #Here I am defining a function and calling it "f".  So now f and print_all are the same
+    print(">>> print_all: f=", f)
+    #What the above line of code does is a debug statement.  It allows me to see where this line of code is at work when I run the command line
+    print(f.read())
+    #The read is a command inside a funciton
+    #This is allowing the printing and reading of f.  F is print all which is also file, here f is test.txt.
+    print("<<< print_all: f=", f)
+    #This is the ending of the debug statement.  It creates a litteral parameter around whhere the function is and what it's doing
+
+def rewind(f):
+    #Above I am crrating a function called rewind and applying it to f which is variable name for my file called test,txt
+    print("<<< rewind: f=", f)
+    #This is the start of the debug statement.
+    f.seek(0)
+    #Above I am using f.seek which is a command inside a function.  Here I am starting it at 0
+    #The seek(0) tells the computer to move the cursor to the  start of the file.  so 0=cursor to start of file, if I say seek(1) that means the
+    #Cursor will stay at current position and seek(2) tells the cursor to go to the end of the file.
+    print("<<< rewind: f=", f)
+    #End of debug statement
+
+def print_a_line(line_count, f):
+    #Here I am making two arguments or places for variables within my printaline function.  line count and f which is test.txt file
+    #Additionally, I am making an opening before the file which is line_count.  This will be used later to create a litteral line count
+    print("<<< print_a_line: f=", f)
+    #Debug statement
+    print(line_count, f.readline())
+    #Here I am making the line_count command print and that is going to be specified later numerically and also readline which is a command that
+    #Only allows one line to be read from the f file which is test.txt
+    print(">>> print_a_line: f=", f)
+    #This is the end of this functions debug statement
+
+current_file = open(input_file)
+#Above I am making it so that this file ex20.py when run, will print information (not copying) from the inputfile which is test.txt
+#This open command makes it so that when current fiel is run, the input file or test.txt opens
+
+print("First let's print the whole file:\n")
+#Here I am printing a statement, the \n makes an indent
+
+print_all(current_file)
+#Here I am calling the print_all function and current file is the new f which allows test.txt to open up when this file is run in command line
+
+print("Now let's rewind, kind of like a tape")
+#This is the plain english for the call I am about to run below
+
+rewind(current_file)
+#Aha, this is the file below and does what the printed instructions say at the top
+
+print("Let's print three lines:")
+
+current_line = 1
+#I set current_file to 1. This means it is now numerical 1.  Now when I run a file, it will have a 1 beside it
+print_a_line(current_line, current_file)
+#Here I am calling the funciton with the additional parameter
+
+current_line = current_line + 1
+#The above line of code makes current_line which is = 1 1+1=2 so therefore it will have 2 beside it
+print_a_line(current_line, current_file)
+
+current_line = current_line + 1
+print_a_line(current_line, current_file)
