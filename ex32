@@ -1,0 +1,45 @@
+the_count = [1,2,3,4,5]
+fruits = ['apples','oranges','pears','apricots']
+change = [1, 'pennies',2,'dimes',3,'quarters']
+#What I did above was to take a variable list name such as fruits and then with the
+#brackets I am making a list.  Lists can have integers or strings but have to be in the above formet and seperated by commas and for strings,
+#strings must be set off with ''
+
+#this first kind of for-loop goes through a list
+#This below for is used like def is, the next word "number" could be anything
+#It could be "abstract" O would just have to call "abstract in the function of the print line
+#When it says "in" it allows whatever im using for to describe to use said list
+#so the word that i use does not matter there its a random for loop variable not function but for loop
+
+for number in the_count:
+    print(f"This is count {number}")
+
+#same as Above
+for fruits in fruits:
+    print(f"A fruit of type: {fruits}")
+
+    #also we can go through mixed lists too
+    #notice we have to use {} since we don't know what's in it
+for i in change:
+    print(f"I got {i}")
+#Here all I am doing is making another loop but with a random variable name or for loop names
+#which is "I" since we dunno what we are going to use in this mixed lists
+
+#We can also build lists, first start with an empty one
+elements = []
+#I am making an open list here with name elements.  Just another way to make a list
+
+#then use the range function to fo 0 to 5 counts
+for i in range(0,6):
+    print(f"Adding {i} to the list.")
+    #append is a function that lists understand
+    elements.append(i)
+#Above I am using the range function which allows my i variable to have something use as an increasing metric.
+#Then I am using a function/loop to use a predef function on list elements
+#which allows me to add on i which is an increasing variable 0-6 to the printed sort_words
+
+#Without the code block of 32-39 we wouldnt be able to
+#utilize the code below
+#now we can print them out too
+for i in elements:
+    print(f"Element was:{i}")
