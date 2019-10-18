@@ -1,0 +1,37 @@
+types_of_people = 10
+#Here I used a name and equal to set a variable to a number
+x = f"There are {types_of_people} types of people."
+#Here I set a variable x equal to a string with a function inside of it or a f string
+
+binary = "binary"
+#Here I made a name equal its name so that I can use it inside of an f string with {} brackets and when run the {} will say binary..
+do_not = "don't"
+#Here I made do_not=don't
+y = f"Those who know {binary} and those who {do_not}."
+#String inside a string example 1
+#Here I used an fstring to simply use functions to say names instead of numbers.
+
+print(x)
+#The x from earlier will now print and show when I run the code, all the work before now was simply setup
+print(y)
+#Now the y variable will print and show.  Before this it was all set up.
+
+print(f"I said: {x}")
+#String inside a string 2
+#Here I am printing "I said" as an f string with the F variable inside which will show the same stuff as before but with "I said" infront
+print(f"I also said: '{y}'")
+#String inside a string 3
+#Weird demo of how ' and " work"'
+
+hilarious = False
+#I think this sets hilarious to a boolena true false operator so when i say hilarious it says false when code is run.
+joke_evaluation = "Isn't that joke so funny?! {}"
+#This is setup for the next print thing in which the format indicator makes the false go in the {} box.
+
+print(joke_evaluation.format(hilarious))
+#String inside a string example 4
+
+w = "This is the left side of..."
+e = "a string with a right side."
+
+print(w+e)
