@@ -1,0 +1,51 @@
+def cheese_and_crackers(cheese_count, boxes_of_crackers):
+    print(f"You have {cheese_count} cheeses!")
+    print(f"You have {boxes_of_crackers} boxes of cracker!")
+    print("Man that's enough for a party!")
+    print("Get a blanket./n")
+
+#All of the above code is used to create a set up so when we call/run/use the cheese_and_crackers fucntion which accepts two in atom (text ediot)
+#variables for the place of cheese_count and boxes_of_crackers that the number will appeat in the {} of the print seciton
+
+#While within the indent of a def or definition of a function the print will not print until the argument is called with variables in place of variable names
+
+#Note, the f within the print section allows for the variable name to be replaced with a later variable
+
+
+print("We can just give the function numbers directly:")
+cheese_and_crackers(20,30)
+
+#Here the variables from above are called as 20,30 instead of variable name with the function in that order.
+
+
+print("OR we can use variables from our script:")
+amount_of_cheese = 10
+amount_of_crackers = 50
+
+cheese_and_crackers(amount_of_cheese, amount_of_crackers)
+
+#Here we are doing the same thing as line 15 of code but we are setting it up differentyl.  We are naming amount of cheese as a random variable and then using that variable name in the function boxes
+
+
+
+print("We can even do math inside too:")
+cheese_and_crackers(10 + 20, 5 + 6)
+
+#Note we have to have a , inbetween math functions to divide them and identify them as 2 variables
+
+
+print("And we can combine the two, variables and math:")
+cheese_and_crackers(amount_of_cheese + 100, amount_of_crackers + 1000)
+
+def thanos_wins_over_avengers(thanos_wins, avengers_wins):
+    print(f"Thanos has won {thanos_wins} which is a lot more than the avengers have won which is {avengers_wins}!")
+    print("But that's what happens when your only rival might be a celestial or apocalypse")
+
+print("We can list thannos wins directly as well")
+thanos_wins_over_avengers(5 , 1)
+
+print("Or we can list out new variables and give them numerical answers")
+thanosw = 5
+avengersw = 1
+
+thanos_wins_over_avengers(thanosw, avengersw)
