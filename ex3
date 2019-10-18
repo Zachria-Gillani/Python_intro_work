@@ -1,0 +1,24 @@
+print("I will now count my chickens:")
+#This allows for a string of only words
+print("Hens",25+30/6)
+#This allows for the word Hens followed by the math answer
+print("Roosters",100-25*3%4)
+#This reads Roosters and the math solution
+print("Now i will count the eggs:")
+#This is just a bunch of words that appear when run
+print(3+2+1-5+4%2-1/4+6)
+#This will give out only a mathematical answer, note no air quotatios "are needed"
+print("Is it true that 3+2<5-7?")
+#This will allow me to write numbers cause they are within the air quotations
+print(3+2<5-7)
+#Due to the less than sign, this will create a boolea or true false statement.
+print("What is 3+2?",3+2)
+#This will read the words and numbers followed by the solution to the math problem.  This is because the math problem is not within the air quotations
+print("What is 5-7?",5-7)
+
+print("Oh, that's why it's False.")
+#This shows something that is different somwhow
+print("How about some more.")
+
+print("Is it greater or equal?",5>=-2)
+#This shows how a greater or equal than sign can give a true false statement ater a string or words
