@@ -1,0 +1,30 @@
+from sys import argv
+#read the WYSS section for how to run This
+#from system import argv, wrgv is imported from pythons library when I run this code allowing me to use argv.
+#This argv or arguments are new to me as of this chapter and
+#you have to use the command line to get the result.  Meaning you need to not just write python ex13.py
+#To make the program run, but I also need to list 3 variables (not 4) such as apple, orange and dragonfruit.
+script, first, second, third = argv
+
+#Argv is different than input beause user has to input info at the command line whearas in input, its done in python
+
+#The above line of code takes the items to the left of the
+# equals sign and allows them to be "unpacked" when argv or argument variables
+#keyword is used.
+
+print(">>>> argv=", repr(argv))
+#Idk what this is but will be explained later.
+print("The script is called:", script)
+print("Your first cariable is:", first)
+print("Your second variable is:", second)
+print("Your third variable is:", third)
+
+dog = input("Do you have a dog?")
+cat = input("I hope you have no cats")
+
+print(f"Well {dog} and {cat} is that right")
+
+
+
+#The code above this is a series of print lines.  Print is great for debuggin!!
+#Also this allows the argv to be stated which herw if I key into the command line, apple orange dragonfruit after python ex13.py will be exaclty that.
