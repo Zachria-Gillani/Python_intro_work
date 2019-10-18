@@ -1,0 +1,22 @@
+tabby_cat ="\tI'm tabbed in."
+#By placing the backslash \t here, it makes a 5 space indent in the srtart of the lines
+persian_cat = "I'm split\non a line."
+#Here the \n caused the letters after the \n to go down and start on a new line
+backslash_cat = "I'm \\ a \\ cat"
+#This \\ a \\ to look like \ a \ instead
+#All these four lines of codes are all still just making variables equal a string.
+
+fat_cat = """
+I'll do a list:
+\t* Cat food
+\t* Fishies
+\t* Catnip\n\t* Gradd
+"""
+#The \t or \n doesn't impact the string..like it doesnt halt the string or appear within it.
+#If i forget to place the \n\ the backslash before the n, then the word gradd is not on the line below
+#The * after the \t causes an astrik to appear..similiar to a bullet point
+#Infact, I could of been doing\n instead of going a lines down manually.
+print(tabby_cat)
+print(persian_cat)
+print(backslash_cat)
+print(fat_cat)
