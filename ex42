@@ -1,0 +1,92 @@
+##Animal is a object (yes, sort of confusing) look at the extra credit
+class Animal(object):
+    def animal_num(num):
+        if num > 4:
+            print("There are more than four animals")
+        else:
+            print("There are less than four animals")
+            return
+a = animal_num(5)
+
+
+##Animal is-a object
+class Dog(Animal):
+
+    def __init__(self, name):
+        ##__init__ takes arguments self and more
+        self.name = name
+        ##dog has-a attribute named name
+    def greeting():
+        print("This is dog object in animal class")
+        return
+
+##Dog is-a animal
+##__init__ takes self and name
+##Dog has-a attribute named name
+class Cat(Animal):
+    #Cat is-a Animal
+
+    def __init__(self, name):
+        ##__init takes arguments self and name
+        self.name = name
+
+##cat has-a attribute named name
+class Person(object):
+    #Person is-a class/object
+
+    def __init__(self, name):
+            ##__init__ takes arguments slef and name
+            self.name = name
+
+    ##Person has a pet of some kind
+            self.pet = None
+
+
+class Employee(Person):
+    #employee is-a object from class person
+
+    def __init__(self, name, salary):
+        ##?? hmmm what is this strange magic?  __init takes arguments slef, name and salary
+        super(Employee, self).__init__(name)
+        ##
+        self.salary = salary
+
+##??
+class Fish(object):
+    pass
+
+##fish is a object
+class Salmon(Fish):
+    pass
+
+##salmon is a fish,
+class Halibut(Fish):
+    pass
+
+
+##rover is a dog
+rover = Dog("Rover")
+
+##satan is a cat
+satan = Cat("Satan")
+
+##mary is a person
+mary = Person("Mary")
+
+##mary has a attribute named pet
+mary.pet = satan
+
+##frank is a employee and takes name and salary arguments
+frank = Employee("Frank", 120000)
+
+##frank has a pet named rover
+frank.pet = rover
+
+##Flipper is a fish
+flipper = Fish()
+
+##Crouse is a salmon
+crouse = Salmon()
+
+## Harry is a halibut 
+harry = Halibut()
