@@ -1,0 +1,18 @@
+formatter = "{} {} {} {}"
+#This formatter is the variable name and everytime I say formatter it enters in 4 text boxs
+
+print(formatter.format(1,2,3,4))
+print(formatter.format("one","two","three","four"))
+#I made the mistake here of not having two "" around the three, this caused an error bar
+print(formatter.format(True,False,False,True))
+#Here I forgot to put .format these do not need quotations becase they are booleans and would cause error if I had put "" around them
+print(formatter.format(formatter, formatter, formatter, formatter))
+print(formatter.format(
+#Here the formatter followerd by sytax word .format allows for the sentences to go in the four open spaces in variable word format
+"try your",
+"wow these guys",
+#I made the mistake here of not putting a comma which is needed to not cauxe an error bar just like after the other variable data inputs
+"really had some time",
+"On their hands"
+))
+#I made the mistake here of not placing the last ))
