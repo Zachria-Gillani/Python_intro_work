@@ -1,0 +1,129 @@
+from sys import exit
+
+def begin ():
+    print("Welcome to battle world")
+    print("Here your witts will be tested")
+    print("Let us begin by choosing your moral path")
+    print("1.Bad")
+    print("2.Good")
+    print("3.Shades of grey")
+
+    choice = input(">")
+    if choice == "1":
+        print("You begin as a deviant for evil")
+        opt1()
+    elif choice == "2":
+        print("You begin as a herald of good")
+        opt2()
+    else:
+        print("""Remember, Remember, the 5th of November,
+        the gunpowder treason and plot. I know of no
+        reason why the gunpowder treason should ever be
+        forgot.""")
+        opt3()
+
+def opt1():
+    print("You are transported into a small room.")
+    print("A small boy appears before you holding a key")
+    print("You must use the key to escape the room")
+    print("What do you do?")
+    print("Take the key")
+    print("Ask for the key")
+
+    choice = input(">")
+
+    if "Take" or "take" in choice:
+        print("The boys appearance changes, he appears as the devil himself and crushes you")
+        dead()
+    else:
+        print("You ask for the key and the boy smiles as he gives it to you")
+        print("The boy whispers, Anarchy wears two faces, both Creator and Destroyer")
+        opt2()
+def opt2():
+    print("Wherever you come from, you are now onthe side of good")
+    print("You can be a good person with a kind heart and still say no.")
+    print("Now you enter a city filled with people, they are running amock, the sirens are blairing and the lights are bright")
+    print("An old man approaches you and asks for money")
+    print("What do you say? Yes or no?")
+
+    choice = input(">")
+
+    if "yes" in choice:
+        print("Do good")
+        dead()
+    else:
+        print("Did you think in life all the answers would be given to you?")
+        dead()
+def opt3():
+    print("You have chosen the life of the morally ambigous")
+    print("You emerge into a prison, their seems to be a riot going on")
+    print("You see the gate of the prison is cracked open, do you:")
+    print("1.  Run through the gate")
+    print("2. Pick up a guards gun")
+    print("3. Take the prison van")
+
+    choice = (">")
+
+    if choice == "1":
+        print("You make it out of the prsion on foot")
+        opt4()
+    elif choice == "2":
+        print("You arm youself with a shotgun and begin plowing your way to the prison boss's lair")
+        opt5()
+    else:
+        print("So, in the interests of survival, they trained themselves to be agreeing machines instead of thinking machines. All their minds had to do was to discover what other people were thinking, and then they thought that, too.” ")
+        opt6()
+
+def opt4():
+    print("You are being chased by the guards and you see a strange glowing hole in a tree")
+    print("Do you hide in the tree or continue running")
+
+    choice = input(">")
+
+    if "hide" in choice:
+        print("You have entered a tear in the fabric of time")
+        begin()
+    else:
+        print("Running is the easiest solution to every problem. The capability of choosing this option on the basis of problem defines your personality")
+        dead()
+def opt5():
+    print("You begin shooting the guards, but they do not seem to be people but rather entities all dressed with white masks")
+    print("You make it to the prison boss's lair.  He is staring out the window watching all his wards kill eachother, he laughs and burns the amendments")
+    print("What do you do?")
+    print("1.shoot")
+    print("2.Try to reason with him")
+
+    choice = input(">")
+
+    if choice == "1":
+        print("The blood of tyrants spills")
+        win()
+    else:
+        print("Wrong choice buster")
+        dead()
+def opt6():
+    print("You are in the car now and driving away from the prison, you see some prsioners on the side of the road, do you stop to help them or continue drive")
+
+    choice = input(">")
+
+    if "stop" in choice:
+        heaven()
+    else:
+        hell()
+def heaven():
+    print("You are transported out of battle world and enter heaven")
+    exit(0)
+
+def hell():
+    print("You are transported out of battle world into hell, now you can continue the fight on evil")
+    exit(0)
+
+def dead():
+    print("Everybody is special. Everybody. Everybody is a hero, a lover, a fool, a villain, everybody. Everybody has their story to tell…")
+
+def win():
+    print("What was done to me created me. It's a basic principle of the Universe that every action will create an equal and opposing reaction.")
+    print("You have won")
+    exit(0)
+
+begin()
